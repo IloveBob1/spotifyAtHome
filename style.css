@@ -1,0 +1,423 @@
+@font-face {
+    font-family: "SpotifyMixUI-Bold";
+    src: url("fonts/SpotifyMix-Bold.ttf");
+}
+
+@font-face {
+    font-family: "SpotifyMixUI-Regular";
+    src: url("fonts/SpotifyMix-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.nav-buttons {
+    display: flex;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.nav-buttons .search,
+.nav-buttons .home {
+    width: 25px;
+    padding: 10px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385),
+        transform 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.nav-buttons .home {
+    margin-right: 10px;
+}
+
+.nav-buttons .search:hover,
+.nav-buttons .home:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    margin-right: 10px;
+    color: #bbb;
+    text-decoration: none;
+    font-family: "SpotifyMixUI-Bold";
+    margin-top: 15px;
+    transition: background-color 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385),
+        transform 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.nav-link:hover {
+    color: #eee;
+    transform: scale(1.1);
+}
+
+.nav-links .seperator {
+    width: 2px;
+    height: 35px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-links svg {
+    width: 15px;
+    position: relative;
+    top: 2px;
+}
+
+.nav-connect {
+    display: flex;
+}
+
+.nav-connect .login {
+    height: 45px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-family: "SpotifyMixUI-Bold";
+    font-size: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.nav-connect .login:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    margin: 10px;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.left .title {
+    color: white;
+    font-family: "SpotifyMixUI-Bold";
+    margin: 20px;
+}
+
+.plus-icon {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    bottom: 43px;
+    left: 240px;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.plus-icon path {
+    transition: fill 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.plus-icon:hover {
+    background-color: #222;
+}
+
+.plus-icon:hover path {
+    fill: white;
+}
+
+.block {
+    background-color: #1a1a1a;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.block .block-title {
+    color: white;
+    font-size: 20px;
+    font-family: "SpotifyMixUI-Bold";
+}
+
+.block .block-description {
+    color: white;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-family: "SpotifyMixUI-Regular";
+    margin-left: 1px;
+}
+
+.block .block-button {
+    font-family: "SpotifyMixUI-Bold";
+    border: none;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 20px;
+    color: #222;
+    font-size: 15px;
+    transition: transform 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.block .block-button:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #333;
+    margin-top: 100%;
+    margin-left: 20px;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    cursor: pointer;
+}
+
+.important {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #eee;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.important:hover {
+    text-decoration: underline;
+}
+
+.lang {
+    border: 1px solid white;
+    width: 175px;
+    height: 40px;
+    color: white;
+    border-radius: 30px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385),
+        color 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.lang .text {
+    margin-top: -22px;
+    font-family: "SpotifyMixUI-Bold";
+}
+
+.lang .icon {
+    width: 20px;
+}
+
+.lang .icon path {
+    transition: fill 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.lang:hover {
+    background-color: white;
+    color: black;
+}
+
+.lang:hover path {
+    fill: black;
+}
+
+.container {
+    display: flex;
+}
+
+.right {
+    width: 70%;
+    background-color: #111;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.section {
+    display: flex;
+}
+
+.section-title {
+    display: block;
+    color: white;
+    font-size: 25px;
+    font-family: "SpotifyMixUI-Bold";
+}
+
+.section-title.title-first {
+    position: absolute;
+    top: 145px;
+    right: 450px;
+}
+
+.section-title.title-second {
+    position: absolute;
+    top: 500px;
+    right: 450px;
+}
+
+.section {
+    margin-top: 20%;
+}
+
+.artists,
+.songs {
+    display: flex;
+}
+
+.section-link {
+    color: gray;
+    text-decoration: none;
+    font-family: "SpotifyMixUI-Bold";
+    font-size: 13px;
+}
+
+.section-link.link-first {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+.section-link.link-second {
+    position: absolute;
+    top: 505px;
+    right: 50px;
+}
+
+.section-title:hover,
+.section-link:hover {
+    text-decoration: underline;
+}
+
+.song,
+.artist {
+    background: transparent;
+    margin-left: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.song .song-title,
+.artist .artist-name {
+    color: white;
+    font-family: "SpotifyMixUI-Bold";
+}
+
+.song img {
+    border-radius: 10px;
+}
+
+.artist img {
+    border-radius: 50%;
+}
+
+.song.be-closer {
+    margin-right: 15px;
+}
+
+.song .authors,
+.artist .status {
+    font-family: "SpotifyMixUI-Regular";
+    color: #ccc;
+    font-size: 14px;
+    position: relative;
+}
+
+.song::before,
+.artist::before {
+    position: absolute;
+    position-anchor: auto;
+    right: anchor(right);
+    transform: translate(260%, 330%);
+    content: "▶";
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385),
+        transform 0.2s cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.song:hover,
+.artist:hover {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(128, 128, 128, 0.1) 100%
+    );
+}
+
+.song:hover::before,
+.artist:hover::before {
+    transform: translate(260%, 260%);
+    opacity: 1;
+}
+
+.songs::before,
+.artists::before {
+    position: absolute;
+    position-anchor: auto;
+    right: anchor(right);
+    transform: translate(1500%, 180%);
+    content: ">";
+    width: 40px;
+    height: 40px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 50%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s cubic-bezier(0.615, -0.357, 0.626, 1.385),
+        transform 0.1Ss cubic-bezier(0.615, -0.357, 0.626, 1.385);
+}
+
+.songs:hover::before,
+.artists:hover::before {
+    opacity: 1;
+    transform: translate(1450%, 180%);
+}
